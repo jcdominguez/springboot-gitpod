@@ -1,4 +1,4 @@
-package com.example.testgitpod;
+package com.example.testgitpod.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

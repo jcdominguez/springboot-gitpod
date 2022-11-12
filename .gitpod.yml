@@ -1,7 +1,7 @@
 tasks:
   - init: ./mvnw clean install -U -DskipTests
     command: ./mvnw spring-boot:run
-    name: Run PetClinic app
+    name: Run TestGitpod app
 
 ports:
   - port: 8080
