@@ -1,2 +1,2 @@
 #FROM gitpod/workspace-full
-FROM gitpod/workspace-mysql
+#FROM gitpod/workspace-mysql
