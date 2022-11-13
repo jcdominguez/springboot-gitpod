@@ -1,11 +1,19 @@
+image: marcopeg/gitpod-workspace-postgres:2.5.0
+
 tasks:
   - init: ./mvnw clean install -U -DskipTests
     command: ./mvnw spring-boot:run
     name: Run TestGitpod app
 
 ports:
+  #SpringBoot
   - port: 8080
     onOpen: open-preview
+  #psql
+  - port: 8008
+    onOpen: ignore
+  - port: 5432
+    onOpen: ignore
 
 vscode:
   extensions:
