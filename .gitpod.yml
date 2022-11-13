@@ -1,4 +1,7 @@
-image: marcopeg/gitpod-workspace-postgres:2.5.0
+# psql
+#image: marcopeg/gitpod-workspace-postgres:2.5.0
+# MySQL
+image: gitpod/workspace-mysql
 
 tasks:
   - init: ./mvnw clean install -U -DskipTests
@@ -10,11 +13,14 @@ ports:
   - port: 8080
     onOpen: open-preview
   #psql
-  - port: 8008
+#  - port: 8008
+#    onOpen: ignore
+#  - port: 5432
+#    onOpen: ignore
+  # MySQL
+  - port: 3306
     onOpen: ignore
-  - port: 5432
-    onOpen: ignore
-
+    
 vscode:
   extensions:
     - pivotal.vscode-spring-boot
