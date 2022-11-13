@@ -20,7 +20,7 @@ ports:
   # MySQL
   - port: 3306
     onOpen: ignore
-    
+
 vscode:
   extensions:
     - pivotal.vscode-spring-boot
