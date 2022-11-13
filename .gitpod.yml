@@ -4,9 +4,11 @@
 image: gitpod/workspace-mysql
 
 tasks:
-  - init: ./mvnw clean install -U -DskipTests
+  - init:
+      mysql -u root -e "create database gitpot_persons";
+      ./mvnw clean install -U -DskipTests
     command: ./mvnw spring-boot:run
-    name: Run TestGitpod app
+    name: Run webapp
 
 ports:
   #SpringBoot
