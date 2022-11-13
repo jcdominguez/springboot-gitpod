@@ -13,6 +13,13 @@ public class PersonService {
     @Autowired
     PersonRepository personRepository;
 
+    public PersonService(){
+        Person p = new Person();
+        p.setFirstName("Michel");
+        p.setLastName("Polnaref");
+        personRepository.save(p);
+    }
+
     public List<Person> getPersons(){
         return personRepository.findAll();
     }
